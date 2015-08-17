@@ -1,14 +1,12 @@
 __author__ = 'wickes1'
 
 
-from nominatim import Nominatim, NominatimReverse
+from nominatim import Nominatim
 import csv
 
 # define function to lookup coordinates
 
-
-
-def getCoords(location):
+def get_coords(location):
     nom = Nominatim()
     try:
         data = nom.query(location)
@@ -17,7 +15,6 @@ def getCoords(location):
     except:
         result = False
     return result
-
 
 # read in the data
 
@@ -39,9 +36,9 @@ nameindex = headers.index('name')
 
 writetheserows = []
 
-for player in players:
+for player in players[:10]:
     city = player[locindex]
-    results =  getCoords(city)
+    results =  get_coords(city)
     if results != False:
         lat = results[0]
         lon = results[1]
