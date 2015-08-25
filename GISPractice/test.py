@@ -5,4 +5,6 @@ from nominatim import Nominatim
 
 nom = Nominatim()
 
-print nom.query("1904 Oliver Dr, Champaign, IL")
+result = nom.query("1904 Oliver Dr, Champaign, IL")
+
+result
