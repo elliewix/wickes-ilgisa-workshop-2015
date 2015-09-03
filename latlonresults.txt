@@ -1,0 +1,4 @@
+city	lat	lon
+Champaign, IL	40.1164205	-88.2433829
+Springfield, IL	39.7989763	-89.6443688
+Bloomington, IL	40.4731073	-88.9941403
